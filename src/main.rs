@@ -5,5 +5,12 @@ fn main() {
 
     println!("予想を入力してください");
 
-    println!("あなたの予想: {}", 5);
+    let mut guess = String::new();
+
+    io::stdin()
+      .read_line(&mut guess)
+      .expect("読み込みに失敗しました");
+
+
+    println!("あなたの予想: {}", guess);
 }
